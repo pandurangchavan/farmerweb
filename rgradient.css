@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.box {
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(circle, rgb(37, 7, 170), rgb(190, 12, 77), rgb(55, 244, 21));
+    border-radius: 20px;
+}

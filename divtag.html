@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="userInput" placeholder="Enter heading text">
+        <button onclick="addHeading()">Add Heading</button>
+        <div id="content"></div>
+    </div>
+
+    <script>
+        function addHeading() {
+            // Get the user input
+            var userInput = document.getElementById("userInput").value;
+
+            // Create a new heading element
+            var heading = document.createElement("h1");
+
+            // Set the text content of the heading to the user's input
+            heading.textContent = userInput;
+
+            // Add a class for styling
+            heading.className = "heading";
+
+            // Append the heading as a child to the div with id "content"
+            document.getElementById("content").appendChild(heading);
+
+            // Clear the input field after adding the heading
+            document.getElementById("userInput").value = '';
+        }
+    </script>
+</body>
+</html>

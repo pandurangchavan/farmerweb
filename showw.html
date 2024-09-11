@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="userInput" placeholder="Enter your text">
+        <button onclick="displayWords()">Display Words</button>
+        <div id="wordCount"></div>
+        <ul id="wordList"></ul>
+    </div>
+    <script>
+        function displayWords() {
+            // Get the user input
+            var userInput = document.getElementById("userInput").value;
+
+            // Split the input into words
+            var words = userInput.trim().split(/\s+/);
+
+            // Get the word count
+            var wordCount = words.length;
+
+            // Display the word count
+            document.getElementById("wordCount").textContent = "Word Count: " + wordCount;
+
+            // Get the word list element
+            var wordList = document.getElementById("wordList");
+
+            // Clear any existing content in the word list
+            wordList.innerHTML = '';
+
+            // Add each word as a list item
+            words.forEach(function(word) {
+                var listItem = document.createElement("li");
+                listItem.textContent = word;
+                wordList.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
